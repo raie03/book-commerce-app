@@ -14,3 +14,4 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
+
