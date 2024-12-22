@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  ClientSafeProvider,
-  getProviders,
-  LiteralUnion,
+  // ClientSafeProvider,
+  // getProviders,
+  // LiteralUnion,
   signIn,
 } from "next-auth/react";
-import { BuiltInProviderType } from "next-auth/providers/index";
+// import { BuiltInProviderType } from "next-auth/providers/index";
 
 export default function LoginBuuton({ provider }: any) {
   return (
