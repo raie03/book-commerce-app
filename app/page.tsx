@@ -9,6 +9,7 @@ import { nextAuthOptions } from "./lib/next-auth/optinons";
 // eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home() {
   const { contents } = await getAllBooks();
+
   const session = await getServerSession(nextAuthOptions);
   const user = session?.user as User;
 
@@ -39,7 +40,7 @@ export default async function Home() {
           <Book
             key={book.id}
             book={book}
-            isPurchased={purchaseBookIds.includes(book.id)}
+            isPurchased={purchaseBookIds?.includes(book.id)}
           />
         ))}
       </main>
