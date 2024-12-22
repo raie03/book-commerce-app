@@ -4,4 +4,10 @@ const globalForPrisma = global as unknown as {
   prisma: PrismaClient | undefined;
 };
 
-export const prisma = globalForPrisma.prisma || new PrismaClient();
+export const prisma =
+  globalForPrisma.prisma ||
+  new PrismaClient({
+    log: ["query", "info", "warn", "error"], // ログの有効化でデバッグ容易化
+  });
+
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;

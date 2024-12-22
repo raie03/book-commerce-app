@@ -26,8 +26,8 @@ export default function RootLayout({
           <Header />
           {children}
         </NextAuthProvider>
-        {/* <Header />
-        {children} */}
+        {/* <Header /> */}
+        {/* {children} */}
       </body>
     </html>
   );
