@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 export async function GET(
     request: NextRequest, 
-    {params}:{params: {userId: string}} ) 
+    {params}:{params: Promise<{userId: string}>} ): Promise<NextResponse>
     {
         const {userId} = await params;
 
