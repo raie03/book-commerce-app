@@ -6,7 +6,7 @@ import React from "react";
 
 const Header = () => {
   const { data: session } = useSession();
-  const user = session?.user;
+  const user = session?.user!;
   console.log(user);
 
   return (
