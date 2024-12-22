@@ -3,7 +3,8 @@ import Stripe from "stripe"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-export async function POST(request: Request, response: Response) {
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+export async function POST(request: Request /*, response: Response*/) {
     const {title, price, bookId, userId} = await request.json();
 
     try{
