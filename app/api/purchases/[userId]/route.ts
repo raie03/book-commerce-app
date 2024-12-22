@@ -1,11 +1,11 @@
 import { prisma } from "@/app/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 // import { use } from "react";
 
 //購入履歴検索API
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 export async function GET(
-    // request: Request, 
+    request: NextRequest, 
     {params}:{params: {userId: string}} ) 
     {
         const {userId} = await params;
