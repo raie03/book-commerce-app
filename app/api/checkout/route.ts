@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 export async function POST(request: Request) {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
     const {title, price, bookId, userId} = await request.json();
 
     try{
