@@ -16,16 +16,16 @@ export async function POST (request: Request /*, response: Response*/){
         
         const existingPurchase = await prisma.purchase.findFirst({
             where:{
-                userId: session.client_reference_id!,
-                bookId: session.metadata?.bookId!,
+                userId: session.client_reference_id ?? "",
+                bookId: session.metadata?.bookId ?? "",
             }
         })
 
         if(!existingPurchase){
             const purchase = await prisma.purchase.create({
                 data: {
-                    userId: session.client_reference_id!,
-                    bookId: session.metadata?.bookId!,
+                    userId: session.client_reference_id ?? "",
+                    bookId: session.metadata?.bookId ?? "",
                 }
             });
             return NextResponse.json({purchase});

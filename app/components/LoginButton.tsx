@@ -8,6 +8,7 @@ import {
 } from "next-auth/react";
 // import { BuiltInProviderType } from "next-auth/providers/index";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export default function LoginBuuton({ provider }: any) {
   return (
     <button

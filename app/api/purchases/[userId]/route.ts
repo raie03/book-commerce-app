@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 // import { use } from "react";
 
 //購入履歴検索API
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export async function GET(
     // request: Request, 
     {params}:{params: any} ) 

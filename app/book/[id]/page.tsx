@@ -2,6 +2,7 @@ import { getDetailBook } from "@/app/lib/microcms/client";
 import Image from "next/image";
 import React from "react";
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 const DetailBook = async ({ params }: any) => {
   const { id } = await params;
   const book = await getDetailBook(id);

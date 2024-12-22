@@ -13,6 +13,7 @@ type BookProps = {
 };
 
 // eslint-disable-next-line react/display-name
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 const Book = ({ book, isPurchased }: BookProps) => {
   const [showModal, setShowModal] = useState(false);
   const { data: session } = useSession();
